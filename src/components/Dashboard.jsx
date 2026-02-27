@@ -117,13 +117,15 @@ export const Dashboard = () => {
         );
     }
 
+    const BASE = import.meta.env.BASE_URL || '';
+
     return (
         <div className="min-h-screen bg-[#0a0a0a] text-white font-sans selection:bg-[#269757] selection:text-white flex flex-col md:h-screen md:overflow-hidden">
             {/* Header */}
             <div className="bg-[#121212] border-b border-[#333] py-2 px-3 md:py-4 md:px-6 shadow-md z-30 flex flex-wrap justify-between items-center gap-2 shrink-0">
                 <div className="flex items-center gap-4">
                     <img
-                        src="/publimetro-positivo_womargin.svg"
+                        src={`${BASE}/publimetro-positivo_womargin.svg`}
                         alt="Publimetro Logo"
                         className="h-8 md:h-10 w-auto object-contain"
                     />

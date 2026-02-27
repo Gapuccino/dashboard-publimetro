@@ -1,15 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const BASE = import.meta.env.BASE_URL || '';
+
 const getLogo = (name) => {
     const lowerName = name.toLowerCase();
-    if (lowerName.includes('el calce')) return '/iconos/elcalce_light-bg.svg';
-    if (lowerName.includes('fayerwayer')) return '/iconos/fayerwayer_light-bg.svg';
-    if (lowerName.includes('ferplei')) return '/iconos/ferplei_light-bg.svg';
-    if (lowerName.includes('nueva mujer')) return '/iconos/nuevamujer_light-bg.svg';
-    if (lowerName.includes('sagrosso')) return '/iconos/sagrosso-color-darkbg-centrado.svg';
-    if (lowerName.includes('mwn brasil')) return '/iconos/mwnbrasil.png'; // Make sure this icon exists or fallback to the Metro globe
-    return '/iconos/Metro.png';
+    if (lowerName.includes('el calce')) return `${BASE}/iconos/elcalce_light-bg.svg`;
+    if (lowerName.includes('fayerwayer')) return `${BASE}/iconos/fayerwayer_light-bg.svg`;
+    if (lowerName.includes('ferplei')) return `${BASE}/iconos/ferplei_light-bg.svg`;
+    if (lowerName.includes('nueva mujer')) return `${BASE}/iconos/nuevamujer_light-bg.svg`;
+    if (lowerName.includes('sagrosso')) return `${BASE}/iconos/sagrosso-color-darkbg-centrado.svg`;
+    if (lowerName.includes('mwn brasil')) return `${BASE}/iconos/mwnbrasil.png`;
+    return `${BASE}/iconos/Metro.png`;
 };
 
 const getScoreColor = (score) => {
